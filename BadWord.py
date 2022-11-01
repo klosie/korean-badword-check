@@ -86,11 +86,7 @@ def load_badword_model() -> Model:
     model.compile(
         loss="binary_crossentropy", 
         optimizer="adam", 
-        metrics=[
-                 metrics.BinaryAccuracy(name="acc"), 
-                 metrics.Recall(name="recall"), 
-                 metrics.Precision(name="prec"),
-                 ]
-                  )
+        metrics=[metrics.BinaryAccuracy(name="acc"), metrics.Recall(name="recall"), metrics.Precision(name="prec")]
+    )
     
     return model
