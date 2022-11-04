@@ -13,10 +13,9 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 
 directory = os.path.dirname(os.path.abspath(__file__))
-path = os.path.join(directory, 'model')
 
 def get_path(filename):
-    return os.path.join(path, filename)
+    return os.path.join('', filename)
 
 if os.path.isfile(get_path('chardict.pkl')):
     with open(get_path('chardict.pkl'), 'rb') as f:
@@ -82,7 +81,7 @@ def load_badword_model() -> Model:
     
     return: 사전학습된 tf.keras.Model 객체가 compile된 상태로 반환됩니다.
     """
-    model = load_model(get_path('model.h5'))
+    model = load_model(get_path('badword_model'))
     model.compile(
         loss="binary_crossentropy", 
         optimizer="adam", 
