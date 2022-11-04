@@ -18,3 +18,10 @@ for i in a:
     else:
         print("Nope")
 
+for i in datas:
+    b = model.predict(BadWord.preprocessing(i))
+    if b >= 0.7:
+        print("욕")
+    else:
+        print("Nope")
+
