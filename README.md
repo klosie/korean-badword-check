@@ -11,5 +11,5 @@ data = BadWord.preprocessing("그게 뭔데 씹덕아...")
 print(model.predict(data))
 ```
 
-[Origin Project](https://github.com/Nam-SW/badword_check)
+[Original Project](https://github.com/Nam-SW/badword_check)
 
